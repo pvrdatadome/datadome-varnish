@@ -1,1 +1,1 @@
-# datadome-nginx
+# datadome-varnish
