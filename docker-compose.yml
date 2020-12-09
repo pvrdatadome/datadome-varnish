@@ -1,0 +1,17 @@
+version: '3'
+services:
+    varnish:
+        build: .
+        container_name: varnish
+        links:
+            - "nginx"
+        depends_on:
+            - "nginx"
+        ports:
+            - "6081:6081"
+
+    nginx:
+        image: nginx
+        container_name: nginx_varnish
+        ports:
+            - "8080:80"
